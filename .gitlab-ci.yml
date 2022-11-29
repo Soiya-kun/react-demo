@@ -1,0 +1,36 @@
+image: node:16.17-slim
+
+stages:
+  - test
+
+
+cache:
+  key: npm
+  policy: pull-push
+  paths:
+    - .npm/
+
+build:
+  stage: test
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+
+lint-and-format:
+  stage: test
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run lint 
+    - npm run format
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
+
+test:
+  stage: test
+  script:
+    - npm ci --cache .npm --prefer-offline
+    - npm run test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "push"'
