@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { DefaultLayout } from "@/ui/layouts/DefaultLayout";
 import { Error404 } from "@/ui/pages/Error404";
+import { Login } from "./ui/pages/Login";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<div />} />
           <Route path="*" element={<Error404 />} />
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
     </BrowserRouter>
