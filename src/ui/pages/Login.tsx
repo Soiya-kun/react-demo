@@ -11,17 +11,17 @@ export function Login() {
         <p className="text-center text-xl font-bold">ログイン</p>
         <div className="mx-auto mt-4 w-96 rounded border">
           <div className="border-b">
-            <div className="mx-auto mt-8 h-10 w-80 rounded border">
-              <p className="text-center text-sm font-semibold leading-10">
+            <div className="mx-auto mt-8 h-10 w-80">
+              <Button variant="primaryOutlined" className="text-center text-sm font-semibold w-80">
                 <img src="g.jpg" alt="" className="m-2 inline h-4" />
                 Googleでログイン
-              </p>
+              </Button>
             </div>
-            <div className="mx-auto mt-4 mb-6 h-10 w-80 rounded border bg-sky-500">
-              <p className="text-center text-sm font-semibold leading-10 text-white">
+            <div className="mx-auto mt-4 mb-6 h-10 w-80">
+              <Button variant="primary" className="text-center text-sm font-semibold text-white w-80">
                 <img src="twitter.png" alt="" className="m-2 inline h-4" />
                 Twitterでログイン
-              </p>
+              </Button>
             </div>
           </div>
           <div className="flex flex-col border-b">
