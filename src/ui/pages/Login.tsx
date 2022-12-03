@@ -1,6 +1,9 @@
+import { Button } from "@/ui/components/atoms/Button";
+import { Link } from "react-router-dom";
+
 export function Login() {
   return (
-    <div className="m-0 p-0">
+    <div>
       <div className="h-12 border-b border-gray-200">
         <img src="logo.png" alt="" className="mt-5 ml-5 h-6" />
       </div>
@@ -21,7 +24,7 @@ export function Login() {
               </p>
             </div>
           </div>
-          <div className="border-b">
+          <div className="flex flex-col border-b">
             <div className="mx-auto w-80">
               <label htmlFor="mail" className="mt-8 block font-semibold">
                 メールアドレス または note ID
@@ -43,18 +46,18 @@ export function Login() {
                 className="mt-2 h-10 w-full rounded"
               />
             </div>
-            <div className="mt-6 text-center text-xs">
-              <a href="#" className="underline">
-                パスワードを忘れた方
-              </a>
+            <div className="mx-auto mt-6 flex text-center text-xs">
+              <Link to="#">
+                <div className="underline">パスワードを忘れた方</div>
+              </Link>
               <div className="mx-2 inline">/</div>
               <a href="#" className="underline">
                 ログインでお困りの方
               </a>
             </div>
-            <div className="mx-auto my-4 mt-6 mb-8 w-80 rounded border bg-neutral-200 text-center font-semibold leading-10">
+            <Button variant="primary" className="mx-auto my-6">
               ログイン
-            </div>
+            </Button>
           </div>
           <div className="my-6 text-center text-emerald-400">
             <a href="#" className="underline">
