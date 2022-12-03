@@ -10,14 +10,14 @@ export function Login() {
       <div className="mt-20">
         <p className="text-center text-xl font-bold">ログイン</p>
         <div className="mx-auto mt-4 w-96 rounded border">
-          <div className="border-b">
+          <div className="border-b h-36">
             <div className="mx-auto mt-8 h-10 w-80">
               <Button variant="primaryOutlined" className="text-center text-sm font-semibold w-80">
                 <img src="g.jpg" alt="" className="m-2 inline h-4" />
                 Googleでログイン
               </Button>
             </div>
-            <div className="mx-auto mt-4 mb-6 h-10 w-80">
+            <div className="mx-auto h-10 w-80 mt-6">
               <Button variant="primary" className="text-center text-sm font-semibold text-white w-80">
                 <img src="twitter.png" alt="" className="m-2 inline h-4" />
                 Twitterでログイン
